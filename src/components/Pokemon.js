@@ -7,6 +7,7 @@ const Pokemon = (props) => {
     const onHeartClick = () => {
         updateFavoritePokemons(pokemon.name)
     }
+    const heart = favoritePokemons.includes(pokemon.name) ? "❤️" : "🖤";
     return (
     <div className="pokemon-card">
         <div className="pokemon-image-container">
@@ -25,7 +26,8 @@ const Pokemon = (props) => {
                         )
                     })}
                 </div>
-                <button className="pokemon-heart-btn" onClick={onHeartClick}>❤
+                <button className="pokemon-heart-btn" onClick={onHeartClick}>
+                      {heart}
                 </button>
             </div>
         </div>
