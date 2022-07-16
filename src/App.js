@@ -83,10 +83,9 @@ const loadFavoritePokemons = () =>{
     value={{
       favoritePokemons: favorites,
       updateFavoritePokemons: updateFavoritePokemons,
-    }}
-  >
+    }}>
     <div>
-      <Navbar />
+      <Navbar /> <br />
       <Searchbar onSearch={onSearchHandler}/>
         {notFound ? (
           <div class-name="not-found-text"> Meteu essa?! </div>

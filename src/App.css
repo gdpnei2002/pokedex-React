@@ -4,7 +4,8 @@
 }
 
 nav{
-  height: 100px;
+  height: 150px;
+  background-color:  #d2ff07;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -13,11 +14,12 @@ nav{
 
 .navbar-img{
   width: 250px;
-  margin-left: 350px;
+  background-color:  #d2ff07;
 }
 
 .logobalImg{
   width: 160px;
+  background-color:  'transparent';
 }
 
 .searchbar-container{
@@ -39,13 +41,18 @@ nav{
   border: none;
 }
 
+button{
+  cursor: pointer;
+}
+
 .searchbar-btn button{
   background-color: #0c8aad;
   border: none;
   border-radius: 10px;
   height: 44px;
   color: white;
-  padding: 10px 12px
+  padding: 10px 12px;
+  cursor: pointer;
 }
 
 .pokedex-header {
@@ -54,15 +61,13 @@ nav{
   justify-content: space-between;
   align-items: center;
   padding: 10px; 
-  
 }
 
 .pokedex-grid {
   display: grid;
   gap: 10px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   padding: 10px; 
-
 }
 
 
@@ -107,7 +112,6 @@ nav{
 }
 
 .card-bottom {
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -116,14 +120,14 @@ nav{
 
 .pokemon-type {
   display: flex;
-
 }
 
 .pokemon-type-text {
   background-color: rgb(57, 189, 119);
-  color: black;
+  color: rgb(240, 249, 116);
   margin-right: 10px;
   text-transform: capitalize;
+  padding: 3px;
 }
 
 .pagination-container {
@@ -147,4 +151,25 @@ nav{
 
 .App {
   text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .pokedex-grid{
+      display: grid;
+      grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .pokedex-grid{
+      display: grid;
+      grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .pokedex-grid{
+    display: grid;
+      grid-template-columns: auto ;
+  }
 }
